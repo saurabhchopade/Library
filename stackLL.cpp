@@ -37,8 +37,15 @@ public:
         return;
     }
 
-    void top(){
+    bool isEmpty(){
         if(head == NULL){
+            return true;
+        }
+        return false;
+    }
+
+    void top(){
+        if(isEmpty()){
             cout << "Stack Is Empty" << endl;
             return;
         }
@@ -46,7 +53,7 @@ public:
     }
 
     void pop(){
-        if(head == NULL){
+        if(isEmpty()){
             cout << "Invalid Operation === Stack is Empty"<< endl;
             return;
         }  
